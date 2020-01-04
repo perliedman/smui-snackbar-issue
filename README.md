@@ -1,5 +1,7 @@
 # SMUI Rollup Example
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/perliedman/smui-snackbar-issue.svg)](https://greenkeeper.io/)
+
 An example project implementing [Svelte Material UI](https://github.com/hperrin/svelte-material-ui) with [Rollup](https://github.com/rollup/rollup).
 
 # License
