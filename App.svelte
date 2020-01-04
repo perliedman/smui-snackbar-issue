@@ -1,25 +1,13 @@
 <div class="container">
-  <Button on:click={() => clicked++}>
-    <Icon class="material-icons">thumb_up</Icon>
-    <Label>Click Me</Label>
-  </Button>
-  <p class="mdc-typography--body1">
-    {#if clicked}
-      You've clicked the button {clicked} time{clicked === 1 ? '' : 's'}.
-    {:else}
-      <span class="grayed">You haven't clicked the button.</span>
-    {/if}
-  </p>
+  {#if snack}
+    <Snack on:eatsnack={() => { snack = false }} />
+  {:else}
+    <span class="grayed">No snacks for you.</span>
+  {/if}
 </div>
 
 <script>
-  import Button, {Label, Icon} from '@smui/button';
+  import Snack from './Snack.svelte';
 
-  let clicked = 0;
+  let snack = true;
 </script>
-
-<style>
-  .grayed {
-    opacity: .6;
-  }
-</style>
